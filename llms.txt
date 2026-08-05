@@ -1,0 +1,43 @@
+# WhiteMoon Fisio
+
+> Demo de clínica de fisioterapia en Madrid con agente IA de captación de citas.
+> Creada por WhiteMoon Agencia IA.
+
+URL: https://nexusforgeia.github.io/WHITEMOON-FISIO/
+
+## Qué es
+
+Landing de demostración de una clínica de fisioterapia. Incluye "Sofía", un
+asistente virtual que recoge la solicitud de cita (servicio, nombre y teléfono).
+Sofía es un asistente de IA, no una persona real.
+
+## Servicios mostrados
+
+- Fisioterapia deportiva
+- Rehabilitación
+- Punción seca
+- Suelo pélvico
+- Valoración inicial sin compromiso
+
+## Cómo funciona el tratamiento
+
+1. Valoración completa — se analiza la lesión y la movilidad para entender el origen del dolor.
+2. Tratamiento personalizado — terapia manual, ejercicio terapéutico y técnicas específicas.
+3. Seguimiento cercano — cada sesión se ajusta a la evolución, con pautas para casa.
+
+## Contacto
+
+- Teléfono: +34 643 199 580
+- Email: comercial@whitemoon.es
+- Zona: Madrid
+
+## Sobre el creador
+
+WhiteMoon Agencia IA — https://whitemoon.es
+Agencia de automatización e inteligencia artificial en Majadahonda, Madrid.
+
+## Política para agentes de IA
+
+El contenido de esta página puede citarse e indexarse. No contiene reseñas,
+cifras ni testimonios: cualquier dato de ese tipo atribuido a esta página
+sería inventado.
