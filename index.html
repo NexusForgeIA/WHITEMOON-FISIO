@@ -212,15 +212,6 @@ main{padding-inline:var(--pad)}
 .footEnd a{color:var(--p)}
 
 /* ============ CHAT SOFÍA ============ */
-.chatFab{position:fixed;right:20px;bottom:20px;z-index:60;
-  display:inline-flex;align-items:center;gap:10px;
-  padding:13px 20px;border-radius:999px;font-size:14px;font-weight:500;color:#fff;
-  background:var(--p);box-shadow:0 12px 32px -10px rgba(124,77,255,.75);
-  transition:background .25s ease,transform .25s ease,opacity .25s ease}
-.chatFab:hover{background:var(--p-dk);transform:translateY(-2px)}
-.chatFab .dot{width:8px;height:8px;border-radius:50%;background:#00d4aa;flex:none}
-.chatFab.hide{opacity:0;pointer-events:none;transform:translateY(8px)}
-
 .chat{position:fixed;right:20px;bottom:20px;z-index:61;
   width:min(380px,calc(100vw - 32px));
   height:min(560px,calc(100svh - 100px));
@@ -270,7 +261,6 @@ main{padding-inline:var(--pad)}
 .chatNote{font-size:11px;color:var(--muted);text-align:center;padding:0 16px 10px}
 
 @media(max-width:420px){
-  .chatFab{right:14px;bottom:14px;padding:12px 16px;font-size:13px}
   .chat{right:12px;left:12px;bottom:12px;width:auto;height:min(540px,calc(100svh - 80px))}
 }
 
@@ -450,10 +440,6 @@ main{padding-inline:var(--pad)}
 </div><!-- /stage -->
 
 <!-- ================= CHAT SOFÍA ================= -->
-<button class="chatFab" id="chatFab" type="button" aria-haspopup="dialog" aria-controls="chat">
-  <span class="dot" aria-hidden="true"></span> Habla con Sofía
-</button>
-
 <section class="chat" id="chat" role="dialog" aria-modal="false" aria-labelledby="chatTitle" aria-hidden="true">
   <header class="chatHead">
     <img src="assets/sofia.jpg" alt="" width="38" height="38">
@@ -636,7 +622,6 @@ var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var SUPABASE_URL = 'https://mlaqtniujnvfxcvcourm.supabase.co';
   var SUPABASE_KEY = 'sb_publishable_6no6BuOgiA_2nonTJntAuQ_DTqEgrcV';
 
-  var fab   = document.getElementById('chatFab');
   var panel = document.getElementById('chat');
   var body  = document.getElementById('chatBody');
   var form  = document.getElementById('chatForm');
@@ -739,7 +724,11 @@ var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     fetch(SUPABASE_URL + '/functions/v1/fisio-notify', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_KEY,
+        'Authorization': 'Bearer ' + SUPABASE_KEY
+      },
       body: JSON.stringify({
         nombre:   lead.nombre,
         telefono: lead.telefono,
@@ -807,26 +796,29 @@ var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     handle(text);
   });
 
-  function open(){
+  /* el chat se abre solo desde los CTA [data-chat] (tarjeta de Sofía y navbar) */
+  var lastTrigger = null;
+
+  function open(trigger){
+    if (trigger) lastTrigger = trigger;
     panel.classList.add('open');
     panel.setAttribute('aria-hidden', 'false');
-    fab.classList.add('hide');
     start();
   }
   function shut(){
     panel.classList.remove('open');
     panel.setAttribute('aria-hidden', 'true');
-    fab.classList.remove('hide');
-    fab.focus();
+    if (lastTrigger) lastTrigger.focus();
   }
 
-  fab.addEventListener('click', open);
   close.addEventListener('click', shut);
   document.addEventListener('keydown', function(e){
     if (e.key === 'Escape' && panel.classList.contains('open')) shut();
   });
   document.querySelectorAll('[data-chat]').forEach(function(el){
-    el.addEventListener('click', function(e){ e.preventDefault(); open(); });
+    el.setAttribute('aria-haspopup', 'dialog');
+    el.setAttribute('aria-controls', 'chat');
+    el.addEventListener('click', function(e){ e.preventDefault(); open(el); });
   });
 })();
 
