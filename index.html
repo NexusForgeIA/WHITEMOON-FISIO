@@ -1,338 +1,877 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>WhiteMoon Fisio · Fisioterapia y recuperación en Madrid</title>
-<meta name="description" content="Clínica de fisioterapia en Madrid: fisioterapia deportiva, rehabilitación, punción seca y suelo pélvico. Primera valoración sin compromiso. Pide cita por el chat.">
-<meta name="theme-color" content="#08080d">
-<link rel="canonical" href="https://nexusforgeia.github.io/WHITEMOON-FISIO/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- ===================== SEO / GEO / AEO ===================== -->
+<title>WhiteMoon Fisio — Fisioterapia y recuperación en Madrid Oeste</title>
+<meta name="description" content="Fisioterapia en Madrid Oeste: deportiva, rehabilitación, punción seca, suelo pélvico, terapia manual y ejercicio terapéutico. Primera valoración sin compromiso. Pide cita por el chat.">
+<link rel="canonical" href="https://nexusforgeia.github.io/WHITEMOON-FISIO/">
+<meta name="robots" content="noindex, nofollow">
+<meta name="author" content="WhiteMoon">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Geo -->
+<meta name="geo.region" content="ES-MD">
+<meta name="geo.placename" content="Majadahonda, Madrid">
+<meta name="geo.position" content="40.4730;-3.8720">
+<meta name="ICBM" content="40.4730, -3.8720">
+
+<!-- Open Graph / Twitter -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="WhiteMoon Fisio">
 <meta property="og:locale" content="es_ES">
+<meta property="og:title" content="WhiteMoon Fisio — Fisioterapia y recuperación en Madrid">
+<meta property="og:description" content="Fisioterapia deportiva, rehabilitación, punción seca y suelo pélvico. Primera valoración sin compromiso.">
 <meta property="og:url" content="https://nexusforgeia.github.io/WHITEMOON-FISIO/">
-<meta property="og:title" content="WhiteMoon Fisio · Fisioterapia y recuperación en Madrid">
-<meta property="og:description" content="Clínica de fisioterapia en Madrid: fisioterapia deportiva, rehabilitación, punción seca y suelo pélvico. Primera valoración sin compromiso. Pide cita por el chat.">
 <meta property="og:image" content="https://nexusforgeia.github.io/WHITEMOON-FISIO/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="WhiteMoon Fisio — tu fisioterapia en Madrid Oeste, con la cita pedida por el chat">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="WhiteMoon Fisio · Fisioterapia y recuperación en Madrid">
-<meta name="twitter:description" content="Clínica de fisioterapia en Madrid: fisioterapia deportiva, rehabilitación, punción seca y suelo pélvico. Primera valoración sin compromiso. Pide cita por el chat.">
+<meta name="twitter:title" content="WhiteMoon Fisio — Fisioterapia y recuperación en Madrid">
+<meta name="twitter:description" content="Fisioterapia deportiva, rehabilitación, punción seca y suelo pélvico. Primera valoración sin compromiso.">
 <meta name="twitter:image" content="https://nexusforgeia.github.io/WHITEMOON-FISIO/assets/og.jpg">
 
-<link rel="preload" href="assets/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/fraunces-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3l11 6.5v13L16 29 5 22.5v-13z' fill='none' stroke='%237c4dff' stroke-width='2.4' stroke-linejoin='round'/%3E%3C/svg%3E">
-<link rel="preload" as="image" href="assets/hero-poster.jpg" fetchpriority="high">
-<link rel="stylesheet" href="assets/css/site.css">
-<script>document.documentElement.classList.add('js');</script>
+<!-- Favicon: cruz en verde azulado -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f7d7a'/%3E%3Cpath d='M16 7v18M7 16h18' stroke='%23fff' stroke-width='3.6' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="assets/logo-whitemoon.png">
+
+<!-- Fuentes auto-hospedadas (subset latin, ejes de peso recortados a lo que se
+     usa). Cero peticiones a Google Fonts: 39 KB desde el propio origen. -->
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/jakarta-var.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/inter-var.woff2" crossorigin>
+
+<link rel="preload" as="image" href="assets/img/hero-bg.jpg" media="(min-width:769px)" fetchpriority="high">
+
+<!-- CSS crítico en línea: el resto de la hoja deja de bloquear el render -->
+<style>
+@font-face{font-family:"Inter var";src:url(assets/fonts/inter-var.woff2) format("woff2");font-weight:400 600;font-style:normal;font-display:swap}
+@font-face{font-family:"Jakarta var";src:url(assets/fonts/jakarta-var.woff2) format("woff2");font-weight:600 800;font-style:normal;font-display:swap}
+:root{--white:#fff;--bone:#f4f9f8;--surface:#fff;--ink:#14302f;--ink-2:#2c4f4d;--muted:#55706e;--blue:#2f7d7a;--blue-deep:#235f5c;--blue-lt:#8fd0cb;--blue-chip:#e7f4f2;--green:#b4572f;--green-deep:#8f4322;--green-lt:#efb28f;--green-chip:#fbebe2;--line:#e2edec;--line-2:#d0e3e0;--sh-sm:0 1px 2px rgba(20,48,47,.05),0 2px 8px rgba(20,48,47,.04);--sh-md:0 2px 6px rgba(20,48,47,.05),0 12px 28px -12px rgba(20,48,47,.14);--sh-lg:0 4px 12px rgba(20,48,47,.06),0 26px 60px -26px rgba(47,125,122,.34);--display:"Jakarta var",system-ui,-apple-system,sans-serif;--body:"Inter var",system-ui,-apple-system,sans-serif;--maxw:1240px;--nav-h:80px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 16px);-webkit-text-size-adjust:100%}
+body{background:var(--white);color:var(--ink-2);font-family:var(--body);font-size:16px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}img,video{max-width:100%;display:block}button,input{font:inherit;color:inherit}
+h1,h2,h3,h4{font-family:var(--display);color:var(--ink);line-height:1.08;letter-spacing:-.022em;font-weight:800}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--display);font-weight:700;font-size:.95rem;letter-spacing:-.01em;padding:14px 26px;border-radius:10px;border:1.5px solid transparent;background:var(--blue);color:#fff;cursor:pointer}
+.btn svg{width:19px;height:19px;flex-shrink:0}
+.btn--ghost{background:var(--white);color:var(--blue);border-color:var(--line-2)}
+.btn--sm{padding:11px 20px;font-size:.88rem;border-radius:9px}
+.nav{position:fixed;inset:0 0 auto 0;z-index:900;background:rgba(255,255,255,.72);backdrop-filter:blur(14px);border-bottom:1px solid transparent}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;height:var(--nav-h)}
+.brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.brand__mark{width:46px;height:46px;border-radius:13px;background:var(--blue-chip);border:1px solid var(--line);display:grid;place-items:center;flex-shrink:0}
+.brand__mark img{width:32px;height:auto}
+.brand__txt b{font-family:var(--display);font-weight:800;font-size:1.08rem;color:var(--ink);line-height:1.1;display:block;letter-spacing:-.02em}
+.brand__txt small{font-family:var(--display);font-weight:700;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);display:block;margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{font-size:.9rem;font-weight:500;color:var(--muted);position:relative;padding:6px 0}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.burger{display:none;width:44px;height:44px;border-radius:11px;border:1px solid var(--line-2);background:var(--white);cursor:pointer;place-items:center;color:var(--ink)}
+.burger svg{width:22px;height:22px}
+.mobile-menu{position:fixed;inset:0;z-index:899;background:rgba(255,255,255,.98);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;opacity:0;pointer-events:none}
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:var(--bone)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg .wash{position:absolute;inset:0;background:radial-gradient(900px 620px at 88% 14%,rgba(143,208,203,.42),transparent 62%),radial-gradient(760px 620px at 96% 88%,rgba(239,178,143,.36),transparent 64%),linear-gradient(180deg,#fff 0%,#f4f9f8 100%)}
+.hero-bg .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.hero-bg .scrim{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(100deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.955) 34%,rgba(248,252,251,.86) 52%,rgba(231,244,242,.55) 74%,rgba(226,243,240,.42) 100%),linear-gradient(180deg,rgba(255,255,255,.85) 0%,rgba(255,255,255,0) 26%,rgba(255,255,255,0) 62%,rgba(244,249,248,.92) 100%)}
+.hero-bg .dots{position:absolute;inset:0;z-index:3;opacity:.5;background-image:radial-gradient(rgba(47,125,122,.16) 1px,transparent 1px);background-size:26px 26px}
+.hero-content{position:relative;z-index:4;width:100%;padding:calc(var(--nav-h) + 44px) 32px 44px}@media (max-width:620px){.hero-content{padding-left:18px;padding-right:18px}}
+.hero h1{font-size:clamp(2.35rem,5.4vw,4.15rem);max-width:16ch}
+.hero h1 .accent{color:var(--blue);display:block}
+.hero-rot{display:flex;align-items:baseline;gap:.5em;flex-wrap:wrap;margin-top:20px;font-family:var(--display);font-weight:600;font-size:clamp(1rem,2.4vw,1.35rem);color:var(--muted)}
+.hero-rot .rot{color:var(--green);font-weight:800;display:inline-block}
+.hero-desc{max-width:56ch;color:var(--ink-2);font-size:1.05rem;margin-top:22px}
+.hero-desc strong{color:var(--ink);font-weight:600}
+.hero-actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+.hero-contact{display:flex;gap:10px 26px;flex-wrap:wrap;margin-top:26px;font-size:.94rem;color:var(--muted)}
+.hero-contact a{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink)}
+.hero-contact svg{width:17px;height:17px;color:var(--blue);flex-shrink:0}
+.reveal{opacity:0;transform:translateY(28px)}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:1080px){.nav-links{display:none}.nav-cta .btn{display:none}.burger{display:grid}}
+@media (max-width:900px){.wrap{padding:0 22px}}
+@media (max-width:768px){.hero-bg .hero-video{display:none!important}}
+@media (max-width:620px){:root{--nav-h:70px}.wrap{padding:0 18px}.hero h1{max-width:none}.hero-actions .btn{flex:1 1 100%}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1!important;transform:none!important}.hero-bg .hero-video{display:none!important}}
+</style>
+<link rel="preload" as="style" href="assets/css/style.css?v=20261021" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="assets/css/style.css?v=20261021"></noscript>
+<link rel="preload" as="style" href="assets/css/holo.css?v=20261021" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="assets/css/holo.css?v=20261021"></noscript>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Physiotherapy",
+  "@type": [
+    "Physiotherapy",
+    "MedicalBusiness"
+  ],
+  "@id": "https://nexusforgeia.github.io/WHITEMOON-FISIO/#business",
   "name": "WhiteMoon Fisio",
-  "description": "Clínica de fisioterapia en Madrid: fisioterapia deportiva, rehabilitación, punción seca y suelo pélvico.",
+  "description": "Clínica ficticia de fisioterapia en Madrid Oeste: fisioterapia deportiva, rehabilitación, punción seca, suelo pélvico, terapia manual y ejercicio terapéutico. Demo de WhiteMoon Agencia IA.",
   "url": "https://nexusforgeia.github.io/WHITEMOON-FISIO/",
   "image": "https://nexusforgeia.github.io/WHITEMOON-FISIO/assets/og.jpg",
   "telephone": "+34643199580",
   "email": "comercial@whitemoon.es",
-  "areaServed": { "@type": "City", "name": "Madrid" },
-  "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressCountry": "ES" },
-  "medicalSpecialty": "Physiotherapy",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Majadahonda",
+    "addressRegion": "Comunidad de Madrid",
+    "addressCountry": "ES"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:30",
+      "closes": "20:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Majadahonda"
+    },
+    {
+      "@type": "City",
+      "name": "Pozuelo de Alarcón"
+    },
+    {
+      "@type": "City",
+      "name": "Las Rozas de Madrid"
+    },
+    {
+      "@type": "City",
+      "name": "Boadilla del Monte"
+    },
+    {
+      "@type": "City",
+      "name": "Villaviciosa de Odón"
+    },
+    {
+      "@type": "City",
+      "name": "Villanueva de la Cañada"
+    },
+    {
+      "@type": "City",
+      "name": "Brunete"
+    },
+    {
+      "@type": "City",
+      "name": "Alcorcón"
+    },
+    {
+      "@type": "City",
+      "name": "Móstoles"
+    }
+  ],
   "availableService": [
-    { "@type": "MedicalTherapy", "name": "Fisioterapia deportiva" },
-    { "@type": "MedicalTherapy", "name": "Rehabilitación" },
-    { "@type": "MedicalTherapy", "name": "Punción seca" },
-    { "@type": "MedicalTherapy", "name": "Suelo pélvico" }
+    {
+      "@type": "MedicalTherapy",
+      "name": "Fisioterapia deportiva"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Rehabilitación"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Punción seca"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Suelo pélvico"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Terapia manual"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Ejercicio terapéutico"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿La primera valoración tiene algún compromiso?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. En la primera visita te escuchamos, valoramos tu movilidad y te explicamos qué vemos y qué plan proponemos. Decides tú si seguir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuántas sesiones necesitaré?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de cada caso. Tras la valoración, tu fisioterapeuta te explica el plan y lo ajusta en cada sesión según tu evolución."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Me recomendaréis ejercicios para casa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Cuando encaja con tu caso, te damos pautas y ejercicios sencillos para hacer entre sesiones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La punción seca es para todo el mundo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Es una técnica que solo se usa después de la valoración y si tu fisioterapeuta considera que encaja contigo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo pedir cita para suelo pélvico?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Es una valoración en un entorno de confianza y con un plan adaptado a ti. Puedes pedirla igual que cualquier otra cita."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo pido cita?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Habla con Sofía, nuestra asistente del chat: eliges qué necesitas, el día y la hora, dejas tu nombre y teléfono, y te llamamos para confirmar. También puedes llamarnos al 643 199 580 o escribir a comercial@whitemoon.es."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://nexusforgeia.github.io/WHITEMOON-FISIO/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Servicios",
+      "item": "https://nexusforgeia.github.io/WHITEMOON-FISIO/#servicios"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cómo trabajamos",
+      "item": "https://nexusforgeia.github.io/WHITEMOON-FISIO/#proceso"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Contacto",
+      "item": "https://nexusforgeia.github.io/WHITEMOON-FISIO/#contacto"
+    }
   ]
 }
 </script>
 </head>
 <body>
+<!-- ===================== SPRITE DE ICONOS ===================== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="s" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></g>
+  </defs>
+  <symbol id="ic-sport" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="5" r="2"/><path d="M4 21l5-8 3 2 3-4 4 2M9 13l-1-4 5-2 2 4"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="ic-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="ic-cert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="m8.5 13.5-1 7.5 4.5-2.5 4.5 2.5-1-7.5"/></symbol>
+  <symbol id="ic-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="ic-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="ic-wa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.2 7.5L3 20.5l1.6-5.6A8.4 8.4 0 1 1 21 11.5z"/><path d="M8.8 9c.2-.5.4-.5.7-.5h.6c.2 0 .4 0 .6.5l.7 1.6c.1.3 0 .5-.1.7l-.4.5c-.1.2-.3.4-.1.7a6 6 0 0 0 2.7 2.3c.3.1.5 0 .7-.2l.5-.6c.2-.2.4-.2.6-.1l1.6.8c.2.1.4.2.4.4a1.8 1.8 0 0 1-1.3 1.7 3.7 3.7 0 0 1-2.7-.5 10 10 0 0 1-4.5-4.4 3.5 3.5 0 0 1-.6-2.1c0-.4.3-.7.6-.8z"/></symbol>
+  <symbol id="ic-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="ic-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="ic-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+  <symbol id="ic-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L3 21l1.9-6.4A8 8 0 1 1 21 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></symbol>
+  <symbol id="ic-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></symbol>
+  <symbol id="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="ic-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="ic-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="ic-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="ic-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></symbol>
+  <symbol id="ic-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H18a2 2 0 0 1 2 2v1"/><rect x="3" y="7" width="18" height="12.5" rx="2.5"/><circle cx="16.5" cy="13.2" r="1.3"/></symbol>
+  <symbol id="ic-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 2.5 17.4A2 2 0 0 0 4.2 20.4h15.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4.5M12 17h.01"/></symbol>
+  <symbol id="ic-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  <symbol id="ic-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5 13.9 9 19.5 11l-5.6 2L12 18.5 10.1 13 4.5 11 10.1 9z"/><path d="M18.5 4v3M20 5.5h-3"/></symbol>
+  <symbol id="ic-pelvis" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20c-4-2-7-5-7-9a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 4-3 7-7 9z"/></symbol>
+  <symbol id="ic-dumbbell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8v8M3 10v4M18 8v8M21 10v4M6 12h12"/></symbol>
+  <symbol id="ic-needle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 15 9M15 9l3-3 2 2-3 3M12 12l2 2M7 17l-3 3"/></symbol>
+  <symbol id="ic-rehab" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/><rect x="3" y="3" width="18" height="18" rx="5"/></symbol>
+  <symbol id="ic-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.4 5.6a5.2 5.2 0 0 0-7.4 0L12 6.6l-1-1a5.2 5.2 0 1 0-7.4 7.4l1 1 7.4 7.4 7.4-7.4 1-1a5.2 5.2 0 0 0 0-7.4z"/></symbol>
+  <symbol id="ic-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="ic-fb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8.5V7a1.5 1.5 0 0 1 1.5-1.5H17V2.5h-2.5A4.5 4.5 0 0 0 10 7v1.5H7.5V12H10v9.5h4V12h2.6l.4-3.5z"/></symbol>
+</svg>
+  <symbol id="ic-hands" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V6a1.5 1.5 0 0 1 3 0v5M10 10V4.5a1.5 1.5 0 0 1 3 0V10M13 10V6a1.5 1.5 0 0 1 3 0v6l1.5-1.5a1.6 1.6 0 0 1 2.3 2.2L16 18a5 5 0 0 1-4 2H11a5 5 0 0 1-4-2l-2-4a1.6 1.6 0 0 1 2.7-1.7L7 14"/></symbol>
 
-<a class="skip" href="#main">Saltar al contenido</a>
-
-<header class="nav">
-  <div class="wrap nav__inner">
-    <a class="brand" href="#main" aria-label="WhiteMoon Fisio, inicio">
-      <span class="brand__kicker">Fisioterapia</span>
-      <span class="brand__mark">WhiteMoon Fisio</span>
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="./" class="brand">
+      <span class="brand__mark"><img src="assets/logo-whitemoon.webp" alt="" width="32" height="34" fetchpriority="high" decoding="async"></span>
+      <span class="brand__txt"><b>WhiteMoon</b><small>Fisioterapia · Madrid</small></span>
     </a>
-    <nav class="nav__links" aria-label="Secciones">
+    <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+      <a href="#top" class="active">Inicio</a>
+      <a href="#clinica">La clínica</a>
       <a href="#servicios">Servicios</a>
-      <a href="#tratamiento">Tratamiento</a>
-      <a href="#sofia">Sofía</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#proceso">Cómo trabajamos</a>
+      <a href="#areas">Áreas</a>
+      <a href="#condiciones">Condiciones</a>
+      <a href="#faq">Preguntas</a>
     </nav>
-    <span class="demo-tag">Demo</span>
-    <button class="btn btn--p nav__cta" type="button" data-chat>Pedir cita</button>
+    <div class="nav-cta">
+      <button class="btn btn--sm" data-watio type="button"><svg aria-hidden="true"><use href="#ic-calendar"/></svg>Pedir cita</button>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><svg aria-hidden="true"><use href="#ic-menu"/></svg></button>
+    </div>
   </div>
 </header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#top">Inicio</a>
+  <a href="#clinica">La clínica</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#proceso">Cómo trabajamos</a>
+  <a href="#areas">Áreas</a>
+  <a href="#condiciones">Condiciones</a>
+  <a href="#faq">Preguntas</a>
+  <a href="#contacto">Contacto</a>
+  <button class="btn" data-watio type="button"><svg aria-hidden="true"><use href="#ic-calendar"/></svg>Pedir cita</button>
+</div>
 
-<main id="main">
+<main>
 
-  <!-- 1 · Hero a sangre -->
-  <section class="hero" aria-labelledby="t-hero">
-    <picture class="hero__foto">
-      <img src="assets/hero-poster.jpg" width="1280" height="720" decoding="async" fetchpriority="high" alt="">
-    </picture>
-
-    <div class="wrap hero__inner">
-      <p class="eyebrow">Primera valoración sin compromiso</p>
-      <h1 id="t-hero">Recupera. <em>Muévete sin&nbsp;dolor.</em></h1>
-      <p class="hero__lead">
-        Tratamos el dolor de raíz con un plan a tu medida, para que vuelvas a moverte con confianza.
-        La cita la pides con Sofía, a cualquier hora.
-      </p>
-      <div class="hero__actions">
-        <button class="btn btn--p btn--lg" type="button" data-chat>Pedir cita</button>
-        <a class="btn btn--ghost btn--lg" href="#servicios">Ver servicios</a>
-      </div>
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="wash"></div>
+    <img class="hero-video" src="assets/img/hero-bg.jpg" alt="" width="1600" height="900" decoding="async">
+    <div class="scrim"></div>
+    <div class="dots"></div>
+  </div>
+  <div class="hl" aria-hidden="true">
+    <div class="hl-arco hl-arco--a"></div><div class="hl-arco hl-arco--b"></div>
+    <div class="hl-suelo"></div>
+    <div class="hl-mini"></div>
+    <div class="hl-graf">
+      <div class="hl-bars"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="hl-linea"><svg viewBox="0 0 200 46" preserveAspectRatio="none"><path pathLength="1" d="M2 40 L45 30 L90 34 L140 14 L196 6"/><circle cx="45" cy="30" r="3"/><circle cx="90" cy="34" r="3"/><circle cx="140" cy="14" r="3"/><circle cx="196" cy="6" r="3"/></svg></div>
     </div>
-
-    <dl class="wrap hero__datos">
-      <div><dt>Primera visita</dt><dd>Valoración sin compromiso</dd></div>
-      <div><dt>Dónde</dt><dd>Madrid</dd></div>
-      <div><dt>Citas</dt><dd>Sofía, asistente IA · demo</dd></div>
-    </dl>
-  </section>
-
-  <!-- 2 · Intro editorial -->
-  <section class="intro" aria-labelledby="t-intro">
-    <div class="wrap intro__grid">
-      <p class="intro__label reveal" id="t-intro">La clínica</p>
-      <p class="intro__texto reveal">
-        No aplicamos protocolos genéricos: <em>valoramos, tratamos y te acompañamos</em>
-        hasta que estás bien.
-      </p>
-      <dl class="cifras">
-        <div class="reveal"><dt>1</dt><dd>Primera valoración sin compromiso, antes de decidir nada.</dd></div>
-        <div class="reveal"><dt>3</dt><dd>Pasos en cada caso: valorar, tratar y acompañarte hasta el alta.</dd></div>
-        <div class="reveal"><dt>4</dt><dd>Áreas de trabajo, de la fisioterapia deportiva al suelo pélvico.</dd></div>
-      </dl>
+    <div class="hl-tel"><div class="hl-pant">
+      <div class="hl-m hl-m--u"><i></i><i></i></div>
+      <div class="hl-m"><i></i><i></i></div>
+      <div class="hl-m hl-m--t"><b></b></div>
+      <div class="hl-cita"><i></i></div>
+    </div></div>
+    <div class="hl-nota"></div>
+  </div>
+  <div class="wrap hero-content">
+    <h1>Recupera.<span class="accent">Muévete sin dolor.</span></h1>
+    <p class="hero-rot">
+      <span>Especialistas en</span>
+      <span class="rot"><b id="rotWord">fisioterapia deportiva</b></span>
+    </p>
+    <p class="hero-desc reveal">Tratamos el dolor de raíz con <strong>un plan a tu medida</strong>. <strong>Primera valoración sin compromiso</strong> y la cita la pides con Sofía, a cualquier hora.</p>
+    <div class="hero-actions reveal">
+      <button class="btn" data-watio type="button"><svg aria-hidden="true"><use href="#ic-calendar"/></svg>Pedir cita</button>
+      <a class="btn btn--ghost" href="#servicios"><svg aria-hidden="true"><use href="#ic-sport"/></svg>Ver servicios</a>
     </div>
-  </section>
+    <p class="hero-contact reveal">
+      <a href="tel:+34643199580"><svg aria-hidden="true"><use href="#ic-phone"/></svg>643 199 580</a>
+      <a href="https://wa.me/34643199580" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-wa"/></svg>WhatsApp</a>
+      <a href="mailto:comercial@whitemoon.es"><svg aria-hidden="true"><use href="#ic-mail"/></svg>comercial@whitemoon.es</a>
+    </p>
+  </div>
+</section>
 
-  <!-- 3 · Servicios -->
-  <section class="bloque bloque--alt" id="servicios" aria-labelledby="t-serv">
-    <div class="wrap">
-      <div class="bloque__head">
-        <div>
-          <p class="eyebrow">01 · Servicios</p>
-          <h2 id="t-serv">Cuatro formas de <em>volver a moverte</em></h2>
-        </div>
-        <p class="bloque__lead">Cuéntale a Sofía qué necesitas y el equipo te llama para cerrar la cita.</p>
+<!-- ===================== BARRA DE CONFIANZA ===================== -->
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-grid">
+      <div class="trust-i"><span class="ic"><svg aria-hidden="true"><use href="#ic-check"/></svg></span><div><b>Valoración sin compromiso</b><span>Antes de decidir nada</span></div></div>
+      <div class="trust-i"><span class="ic"><svg aria-hidden="true"><use href="#ic-search"/></svg></span><div><b>Plan a tu medida</b><span>Ajustado a tu evolución</span></div></div>
+      <div class="trust-i"><span class="ic"><svg aria-hidden="true"><use href="#ic-chat"/></svg></span><div><b>Cita por el chat</b><span>Con Sofía, a cualquier hora</span></div></div>
+      <div class="trust-i"><span class="ic"><svg aria-hidden="true"><use href="#ic-clock"/></svg></span><div><b>Seguimiento cercano</b><span>Hasta el alta</span></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track" id="marquee">
+    <span class="marquee-item"><b>Valoración</b> completa de tu movilidad<span class="dot"></span></span>
+    <span class="marquee-item"><b>Plan</b> explicado antes de empezar<span class="dot"></span></span>
+    <span class="marquee-item"><b>Primera visita</b> sin compromiso<span class="dot"></span></span>
+    <span class="marquee-item"><b>Pautas</b> para casa si encajan contigo<span class="dot"></span></span>
+    <span class="marquee-item"><b>Sesión</b> ajustada a tu evolución<span class="dot"></span></span>
+    <span class="marquee-item"><b>Alta</b> acordada contigo<span class="dot"></span></span>
+  </div>
+</div>
+
+
+
+<!-- ===================== LA CLÍNICA ===================== -->
+<section class="sec" id="clinica">
+  <span class="bignum" aria-hidden="true" data-n="01" style="left:-1.5vw;top:26px"></span>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">La clínica</span>
+      <h2>Valoramos, tratamos<br>y te acompañamos</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p>WhiteMoon Fisio es una <strong>clínica de fisioterapia en Madrid Oeste</strong>: fisioterapia deportiva, rehabilitación, punción seca, suelo pélvico, terapia manual y ejercicio terapéutico bajo el mismo techo.</p>
+        <p>No aplicamos protocolos genéricos. Cada caso empieza con una <strong>valoración de tu movilidad y del origen del dolor</strong>; después te explicamos qué vemos y qué plan proponemos.</p>
+        <p>La cita la pides por el chat, a cualquier hora, y el equipo te llama para confirmarla. Y si prefieres pensarlo, <strong>vamos a tu ritmo</strong>.</p>
       </div>
-
-      <ul class="svcs">
-        <li class="svc reveal">
-          <!-- Foto: Annie Spratt · https://unsplash.com/photos/Nt5eeIKH-1s -->
+      <div class="about-media reveal">
+        <div class="framed">
           <picture>
-            <source type="image/webp" srcset="assets/img/svc-deportiva-600.webp 600w, assets/img/svc-deportiva.webp 900w" sizes="(min-width: 1400px) 312px, (min-width: 1100px) 23vw, (min-width: 640px) 45vw, 92vw">
-            <img src="assets/img/svc-deportiva.jpg" srcset="assets/img/svc-deportiva-600.jpg 600w, assets/img/svc-deportiva.jpg 900w" sizes="(min-width: 1400px) 312px, (min-width: 1100px) 23vw, (min-width: 640px) 45vw, 92vw" width="900" height="1125" loading="lazy" decoding="async"
-                 alt="Fisioterapeuta guiando con las manos la cadera de un deportista que estira sobre una esterilla.">
+            <source type="image/webp" sizes="(max-width:900px) calc(100vw - 36px), 560px" srcset="assets/img/clinica-480.webp 480w, assets/img/clinica.webp 900w">
+            <img src="assets/img/clinica-480.jpg" srcset="assets/img/clinica-480.jpg 480w, assets/img/clinica.jpg 900w" sizes="(max-width:900px) calc(100vw - 36px), 560px" alt="Fisioterapeuta tratando la rodilla de un paciente tumbado en una camilla, foto de archivo" width="900" height="640" loading="lazy" decoding="async">
           </picture>
-          <span class="svc__num" aria-hidden="true">01</span>
+          <div class="hl-sc" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b><em></em></div>
+        </div>
+        <div class="hs-fo hs-fo--a hs-p hs-p--g" aria-hidden="true" data-l="Valoración"><div class="hs-pul"><svg width="260" height="70" viewBox="0 0 260 70" preserveAspectRatio="none"><path fill="none" stroke="none" pathLength="1" d="M0 40 H70 L82 40 L92 10 L106 62 L118 28 L128 40 H260"/></svg></div></div>
+        <div class="hs-fo hs-fo--b hs-p d2" aria-hidden="true" data-l="Plan a medida"><div class="hl-bars"><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="about-badge">
+          <span class="ic"><svg aria-hidden="true"><use href="#ic-shield"/></svg></span>
+          <div><b>Primera valoración</b><span>Sin compromiso</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICIOS ===================== -->
+<section class="sec sec--bone" id="servicios">
+  <span class="bignum" aria-hidden="true" data-n="02" style="right:-1.5vw;top:20px"></span>
+  <div class="wrap">
+    <div class="hs" aria-hidden="true"><div class="hs-arco hs-arco--a"></div><div class="hs-arco hs-arco--b"></div><div class="hs-suelo"></div><div class="hs-p d2" style="left:0;top:40px;width:215px;height:172px;--r:-3deg;transform:rotate(-3deg)" data-l="Sesiones"><div class="hs-rows"><div class="hs-r"><b></b></div><div class="hs-r"><b></b></div><div class="hs-r"><b></b></div><div class="hs-r"><b></b></div></div></div><div class="hs-tel" style="right:14px;top:0"><div class="hs-pant"><div class="hl-m hl-m--u"><i></i><i></i></div><div class="hl-m"><i></i><i></i></div><div class="hl-m hl-m--t"><b></b></div><div class="hl-cita"><i></i></div></div></div></div>
+    <div class="sec-head reveal">
+      <span class="eyebrow green">Servicios</span>
+      <h2>Seis formas de<br>volver a moverte</h2>
+      <p>Cuéntale a Sofía qué necesitas y pide tu cita. <strong>No mostramos precios en la web</strong>: en la valoración te explicamos el plan.</p>
+    </div>
+    <div class="svc-grid">
+
+      <article class="svc-card reveal">
+        <div class="svc-media">
+          <picture>
+            <source type="image/webp" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" srcset="assets/img/svc-deportiva-400.webp 400w, assets/img/svc-deportiva.webp 720w">
+            <img src="assets/img/svc-deportiva-400.jpg" srcset="assets/img/svc-deportiva-400.jpg 400w, assets/img/svc-deportiva.jpg 720w" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" alt="Fisioterapeuta ayudando a una persona a estirar sobre una esterilla, foto de archivo" width="720" height="440" loading="lazy" decoding="async">
+          </picture>
+          <span class="svc-tag"><svg aria-hidden="true"><use href="#ic-sport"/></svg>Deportiva</span>
+        </div>
+        <div class="svc-body">
           <h3>Fisioterapia deportiva</h3>
           <p>Para lesiones y sobrecargas de quien entrena. Tratamos y te ayudamos a volver a tu actividad de forma progresiva.</p>
-          <button class="enlace" type="button" data-chat>Pedir cita</button>
-        </li>
-        <li class="svc reveal">
-          <!-- Foto: Juls P · https://unsplash.com/photos/lB6lbkbe1XA -->
+          <div class="svc-foot">
+            <p class="svc-price">Vuelta progresiva<small>a tu actividad</small></p>
+            <button class="svc-cta" type="button" data-watio data-servicio="Fisioterapia deportiva">Pedir cita<svg aria-hidden="true"><use href="#ic-arrow"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="svc-card reveal">
+        <div class="svc-media">
           <picture>
-            <source type="image/webp" srcset="assets/img/svc-rehabilitacion-600.webp 600w, assets/img/svc-rehabilitacion.webp 900w" sizes="(min-width: 1400px) 312px, (min-width: 1100px) 23vw, (min-width: 640px) 45vw, 92vw">
-            <img src="assets/img/svc-rehabilitacion.jpg" srcset="assets/img/svc-rehabilitacion-600.jpg 600w, assets/img/svc-rehabilitacion.jpg 900w" sizes="(min-width: 1400px) 312px, (min-width: 1100px) 23vw, (min-width: 640px) 45vw, 92vw" width="900" height="1125" loading="lazy" decoding="async"
-                 alt="Manos sujetando unas mancuernas pequeñas durante un ejercicio terapéutico.">
+            <source type="image/webp" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" srcset="assets/img/svc-rehabilitacion-400.webp 400w, assets/img/svc-rehabilitacion.webp 720w">
+            <img src="assets/img/svc-rehabilitacion-400.jpg" srcset="assets/img/svc-rehabilitacion-400.jpg 400w, assets/img/svc-rehabilitacion.jpg 720w" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" alt="Persona haciendo ejercicio de rehabilitación con una mancuerna pequeña, foto de archivo" width="720" height="440" loading="lazy" decoding="async">
           </picture>
-          <span class="svc__num" aria-hidden="true">02</span>
+          <span class="svc-tag"><svg aria-hidden="true"><use href="#ic-rehab"/></svg>Rehabilitación</span>
+        </div>
+        <div class="svc-body">
           <h3>Rehabilitación</h3>
           <p>Recuperación tras una lesión, una operación o un tiempo de inmovilización, con ejercicio terapéutico guiado.</p>
-          <button class="enlace" type="button" data-chat>Pedir cita</button>
-        </li>
-        <li class="svc reveal">
-          <!-- Foto: Katherine Hanlon · https://unsplash.com/photos/QgcdtM9rA5s -->
+          <div class="svc-foot">
+            <p class="svc-price">Ejercicio guiado<small>tras lesión u operación</small></p>
+            <button class="svc-cta" type="button" data-watio data-servicio="Rehabilitación">Pedir cita<svg aria-hidden="true"><use href="#ic-arrow"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="svc-card reveal">
+        <div class="svc-media">
           <picture>
-            <source type="image/webp" srcset="assets/img/svc-puncion-600.webp 600w, assets/img/svc-puncion.webp 900w" sizes="(min-width: 1400px) 312px, (min-width: 1100px) 23vw, (min-width: 640px) 45vw, 92vw">
-            <img src="assets/img/svc-puncion.jpg" srcset="assets/img/svc-puncion-600.jpg 600w, assets/img/svc-puncion.jpg 900w" sizes="(min-width: 1400px) 312px, (min-width: 1100px) 23vw, (min-width: 640px) 45vw, 92vw" width="900" height="1125" loading="lazy" decoding="async"
-                 alt="Manos de un fisioterapeuta colocando una aguja fina sobre la piel.">
+            <source type="image/webp" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" srcset="assets/img/svc-puncion-400.webp 400w, assets/img/svc-puncion.webp 720w">
+            <img src="assets/img/svc-puncion-400.jpg" srcset="assets/img/svc-puncion-400.jpg 400w, assets/img/svc-puncion.jpg 720w" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" alt="Detalle de una aguja de punción seca entre los dedos, foto de archivo" width="720" height="440" loading="lazy" decoding="async">
           </picture>
-          <span class="svc__num" aria-hidden="true">03</span>
+          <span class="svc-tag"><svg aria-hidden="true"><use href="#ic-needle"/></svg>Punción seca</span>
+        </div>
+        <div class="svc-body">
           <h3>Punción seca</h3>
           <p>Técnica para tratar puntos gatillo y contracturas, siempre dentro de un plan y después de la valoración.</p>
-          <button class="enlace" type="button" data-chat>Pedir cita</button>
-        </li>
-        <li class="svc reveal">
-          <!-- Foto: Alina Rubo · https://unsplash.com/photos/TaxQjdfhGQM -->
+          <div class="svc-foot">
+            <p class="svc-price">Tras la valoración<small>dentro de un plan</small></p>
+            <button class="svc-cta" type="button" data-watio data-servicio="Punción seca">Pedir cita<svg aria-hidden="true"><use href="#ic-arrow"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="svc-card reveal">
+        <div class="svc-media">
           <picture>
-            <source type="image/webp" srcset="assets/img/svc-suelo-pelvico-600.webp 600w, assets/img/svc-suelo-pelvico.webp 900w" sizes="(min-width: 1400px) 312px, (min-width: 1100px) 23vw, (min-width: 640px) 45vw, 92vw">
-            <img src="assets/img/svc-suelo-pelvico.jpg" srcset="assets/img/svc-suelo-pelvico-600.jpg 600w, assets/img/svc-suelo-pelvico.jpg 900w" sizes="(min-width: 1400px) 312px, (min-width: 1100px) 23vw, (min-width: 640px) 45vw, 92vw" width="900" height="1125" loading="lazy" decoding="async"
-                 alt="Persona de espaldas haciendo un estiramiento en el suelo sobre una esterilla.">
+            <source type="image/webp" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" srcset="assets/img/svc-suelo-pelvico-400.webp 400w, assets/img/svc-suelo-pelvico.webp 720w">
+            <img src="assets/img/svc-suelo-pelvico-400.jpg" srcset="assets/img/svc-suelo-pelvico-400.jpg 400w, assets/img/svc-suelo-pelvico.jpg 720w" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" alt="Persona estirando sobre una esterilla, foto de archivo" width="720" height="440" loading="lazy" decoding="async">
           </picture>
-          <span class="svc__num" aria-hidden="true">04</span>
+          <span class="svc-tag"><svg aria-hidden="true"><use href="#ic-pelvis"/></svg>Suelo pélvico</span>
+        </div>
+        <div class="svc-body">
           <h3>Suelo pélvico</h3>
           <p>Valoración y trabajo del suelo pélvico en un entorno de confianza, con un plan adaptado a ti.</p>
-          <button class="enlace" type="button" data-chat>Pedir cita</button>
-        </li>
-      </ul>
-      <p class="nota">Descripciones de ejemplo para la demo. Sin precios: en la web real los pone la clínica.</p>
+          <div class="svc-foot">
+            <p class="svc-price">Entorno de confianza<small>plan adaptado a ti</small></p>
+            <button class="svc-cta" type="button" data-watio data-servicio="Suelo pélvico">Pedir cita<svg aria-hidden="true"><use href="#ic-arrow"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="svc-card reveal">
+        <div class="svc-media">
+          <picture>
+            <source type="image/webp" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" srcset="assets/img/svc-manual-400.webp 400w, assets/img/svc-manual.webp 720w">
+            <img src="assets/img/svc-manual-400.jpg" srcset="assets/img/svc-manual-400.jpg 400w, assets/img/svc-manual.jpg 720w" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" alt="Manos de un fisioterapeuta trabajando sobre la espalda de un paciente, foto de archivo" width="720" height="440" loading="lazy" decoding="async">
+          </picture>
+          <span class="svc-tag"><svg aria-hidden="true"><use href="#ic-hands"/></svg>Terapia manual</span>
+        </div>
+        <div class="svc-body">
+          <h3>Terapia manual</h3>
+          <p>Tratamiento con las manos para aliviar tensión y recuperar movilidad, combinado con ejercicio y pautas para casa.</p>
+          <div class="svc-foot">
+            <p class="svc-price">Con las manos<small>y pautas para casa</small></p>
+            <button class="svc-cta" type="button" data-watio data-servicio="Terapia manual">Pedir cita<svg aria-hidden="true"><use href="#ic-arrow"/></svg></button>
+          </div>
+        </div>
+      </article>
+
+      <article class="svc-card reveal">
+        <div class="svc-media">
+          <picture>
+            <source type="image/webp" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" srcset="assets/img/svc-ejercicio-400.webp 400w, assets/img/svc-ejercicio.webp 720w">
+            <img src="assets/img/svc-ejercicio-400.jpg" srcset="assets/img/svc-ejercicio-400.jpg 400w, assets/img/svc-ejercicio.jpg 720w" sizes="(max-width:620px) calc(100vw - 36px), (max-width:900px) calc(50vw - 34px), 380px" alt="Pared de madera con material de pilates y bandas elásticas, foto de archivo" width="720" height="440" loading="lazy" decoding="async">
+          </picture>
+          <span class="svc-tag"><svg aria-hidden="true"><use href="#ic-dumbbell"/></svg>Ejercicio</span>
+        </div>
+        <div class="svc-body">
+          <h3>Ejercicio terapéutico</h3>
+          <p>Ejercicios pautados para ganar fuerza y control, con material de la clínica y supervisión de tu fisioterapeuta.</p>
+          <div class="svc-foot">
+            <p class="svc-price">Fuerza y control<small>supervisado</small></p>
+            <button class="svc-cta" type="button" data-watio data-servicio="Ejercicio terapéutico">Pedir cita<svg aria-hidden="true"><use href="#ic-arrow"/></svg></button>
+          </div>
+        </div>
+      </article>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 4 · Tratamiento -->
-  <section class="bloque metodo" id="tratamiento" aria-labelledby="t-trat">
-    <span class="metodo__fantasma" aria-hidden="true">Movimiento</span>
-    <div class="wrap">
-      <div class="bloque__head">
-        <div>
-          <p class="eyebrow">02 · Tratamiento a tu medida</p>
-          <h2 id="t-trat">Vuelve a tu <em>mejor versión</em></h2>
-        </div>
-        <p class="bloque__lead">
-          Desde la primera valoración hasta el alta, diseñamos un tratamiento pensado para ti
-          y ajustamos cada sesión a tu evolución.
-        </p>
-      </div>
-
-      <ol class="metodo__lista">
-        <li class="paso reveal">
-          <span class="paso__num" aria-hidden="true">01</span>
-          <h3>Valoración completa</h3>
-          <p>Analizamos tu lesión y tu movilidad para entender el origen del dolor.</p>
-        </li>
-        <li class="paso reveal">
-          <span class="paso__num" aria-hidden="true">02</span>
-          <h3>Tratamiento personalizado</h3>
-          <p>Terapia manual, ejercicio terapéutico y técnicas específicas según tu caso.</p>
-        </li>
-        <li class="paso reveal">
-          <span class="paso__num" aria-hidden="true">03</span>
-          <h3>Seguimiento cercano</h3>
-          <p>Ajustamos cada sesión a tu evolución y te damos pautas para casa.</p>
-        </li>
-      </ol>
-
-      <div class="metodo__cta">
-        <button class="btn btn--p" type="button" data-chat>Pedir cita</button>
-        <a class="btn btn--ghost" href="tel:+34643199580">Llámanos</a>
-      </div>
+<!-- ===================== PROCESO ===================== -->
+<section class="sec" id="proceso">
+  <span class="bignum" aria-hidden="true" data-n="03" style="left:-1.5vw;top:26px"></span>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Cómo trabajamos</span>
+      <h2>Un tratamiento a tu medida,<br>de la valoración al alta</h2>
+      <p>Cuatro pasos, en este orden. Ajustamos cada sesión a tu evolución.</p>
     </div>
-  </section>
-
-  <!-- 5 · Sofía -->
-  <section class="sofia bloque--alt" id="sofia" aria-labelledby="t-sofia">
-    <div class="wrap sofia__grid">
-      <figure class="sofia__foto reveal" style="margin:0">
-        <img src="assets/sofia.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="Sofía, asistente de fisioterapia">
-        <figcaption>Sofía · Asistente IA</figcaption>
-      </figure>
-      <div class="sofia__txt">
-        <p class="eyebrow">03 · Tu cita</p>
-        <h2 id="t-sofia">Pide cita <em>hablando con Sofía</em></h2>
-        <p>
-          Sofía es la asistente de IA de la clínica. Te pregunta qué necesitas, apunta tu nombre
-          y tu teléfono, y el equipo te llama para cerrar la cita.
-        </p>
-        <p>
-          No da consejo médico: eso se resuelve en la valoración, con tu fisioterapeuta.
-        </p>
-        <button class="btn btn--ghost" type="button" data-chat>Hablar con Sofía</button>
+    <div class="proc-grid">
+      <div class="proc-c reveal"><span class="hc hc-cal" aria-hidden="true"><i></i></span>
+        <span class="n">01</span><span class="ic"><svg aria-hidden="true"><use href="#ic-calendar"/></svg></span>
+        <h3>Pides tu cita</h3>
+        <p>Con Sofía en el chat: qué necesitas, día y hora, y tus datos. Sin formularios largos.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- 6 · Contacto -->
-  <section class="bloque contacto" id="contacto" aria-labelledby="t-contacto">
-    <div class="wrap">
-      <p class="eyebrow">04 · Contacto</p>
-      <h2 id="t-contacto">Empieza por <em>una valoración</em></h2>
-
-      <dl class="contacto__grid">
-        <div class="reveal">
-          <dt>Dónde</dt>
-          <dd>Madrid</dd>
-          <dd class="contacto__nota">Dirección real al convertir la demo</dd>
-        </div>
-        <div class="reveal">
-          <dt>Primera visita</dt>
-          <dd>Valoración sin compromiso</dd>
-          <dd class="contacto__nota">Pídela con Sofía o llamando</dd>
-        </div>
-        <div class="reveal">
-          <dt>Contacto de la demo</dt>
-          <dd>
-            <a href="tel:+34643199580">643 199 580</a><br>
-            <a href="mailto:comercial@whitemoon.es">comercial@whitemoon.es</a>
-          </dd>
-          <dd class="contacto__nota">Lo atiende WhiteMoon</dd>
-        </div>
-      </dl>
-
-      <div class="cierre reveal">
-        <p class="cierre__txt">
-          ¿Te duele algo? Pide tu valoración.
-          <span>Sofía te atiende ahora, tarda menos que una llamada.</span>
-        </p>
-        <button class="btn btn--p btn--lg" type="button" data-chat>Pedir cita</button>
+      <div class="proc-c reveal"><span class="hc hc-scan" aria-hidden="true"><span class="hc-bars"><i></i><i></i><i></i><i></i><i></i></span></span>
+        <span class="n">02</span><span class="ic"><svg aria-hidden="true"><use href="#ic-search"/></svg></span>
+        <h3>Valoración completa</h3>
+        <p>Analizamos tu lesión y tu movilidad para entender el origen del dolor.</p>
+      </div>
+      <div class="proc-c reveal"><span class="hc hc-doc" aria-hidden="true"><i></i><i></i><i></i><u></u><b></b></span>
+        <span class="n">03</span><span class="ic"><svg aria-hidden="true"><use href="#ic-hands"/></svg></span>
+        <h3>Tratamiento personalizado</h3>
+        <p>Terapia manual, ejercicio terapéutico y técnicas específicas según tu caso.</p>
+      </div>
+      <div class="proc-c reveal"><span class="hc hc-ring" aria-hidden="true"><i></i><b></b></span>
+        <span class="n">04</span><span class="ic"><svg aria-hidden="true"><use href="#ic-check"/></svg></span>
+        <h3>Seguimiento y alta</h3>
+        <p>Te damos pautas para casa y te acompañamos hasta que estás bien.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- ===================== POR QUÉ NOSOTROS ===================== -->
+<section class="sec sec--bone" id="nosotros">
+  <span class="bignum" aria-hidden="true" data-n="04" style="right:-1.5vw;top:20px"></span>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow green">Por qué nosotros</span>
+      <h2>Una clínica donde<br>se está a gusto</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-c reveal"><span class="hc hc-doc" aria-hidden="true"><i></i><i></i><i></i><u></u><b></b></span><span class="ic"><svg aria-hidden="true"><use href="#ic-file"/></svg></span><h3>Plan explicado</h3><p>Te contamos qué vemos y qué proponemos antes de empezar. Sin sorpresas.</p></div>
+      <div class="why-c reveal"><span class="hc hc-seal" aria-hidden="true"><i></i><b></b><u></u></span><span class="ic"><svg aria-hidden="true"><use href="#ic-cert"/></svg></span><h3>Valoración primero</h3><p>Ninguna técnica se aplica sin valorar antes tu caso.</p></div>
+      <div class="why-c reveal"><span class="hc hc-shield" aria-hidden="true"><i></i></span><span class="ic"><svg aria-hidden="true"><use href="#ic-shield"/></svg></span><h3>Sin consejo a ciegas</h3><p>El consejo médico se resuelve en la valoración, con tu fisioterapeuta.</p></div>
+      <div class="why-c reveal"><span class="hc hc-ecg" aria-hidden="true"><svg width="104" height="64" viewBox="0 0 104 64" preserveAspectRatio="none"><path fill="none" stroke="none" pathLength="1" d="M0 36 H30 L38 36 L44 14 L52 54 L60 26 L66 36 H104"/></svg></span><span class="ic"><svg aria-hidden="true"><use href="#ic-heart"/></svg></span><h3>Vamos a tu ritmo</h3><p>Si prefieres pensarlo, no hay prisa ni presión. Tú decides.</p></div>
+    </div>
+    <div class="nos-grid">
+      <div class="nos-copy reveal">
+        <span class="eyebrow">Nuestro compromiso</span>
+        <p style="margin-top:16px">No vendemos sesiones, ayudamos a recuperarte. Por eso <strong>solo proponemos lo que encaja contigo</strong>: si algo más sencillo te sirve, te lo decimos.</p>
+        <p>Y si tu caso necesita a otro profesional, te lo decimos en vez de improvisar.</p>
+      </div>
+      <div class="check-list reveal">
+        <div class="check-row"><span class="ic"><svg aria-hidden="true"><use href="#ic-check"/></svg></span><div><b>Información explicada</b><span>Entiendes qué haremos y por qué.</span></div></div>
+        <div class="check-row"><span class="ic"><svg aria-hidden="true"><use href="#ic-dumbbell"/></svg></span><div><b>Pautas para casa</b><span>Ejercicios sencillos entre sesiones, si encajan contigo.</span></div></div>
+        <div class="check-row"><span class="ic"><svg aria-hidden="true"><use href="#ic-calendar"/></svg></span><div><b>Cita sin llamadas</b><span>La pides por el chat a cualquier hora.</span></div></div>
+        <div class="check-row"><span class="ic"><svg aria-hidden="true"><use href="#ic-clock"/></svg></span><div><b>Seguimiento</b><span>Ajustamos cada sesión a tu evolución.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ÁREAS ===================== -->
+<section class="sec" id="areas">
+  <span class="bignum" aria-hidden="true" data-n="05" style="left:-1.5vw;top:20px"></span>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Áreas</span>
+      <h2>Cada necesidad,<br>su enfoque</h2>
+      <p>Tres áreas de trabajo dentro de la misma clínica.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-c reveal"><span class="hc hc-orb" aria-hidden="true"><i></i><b></b><u></u></span>
+        <span class="ic"><svg aria-hidden="true"><use href="#ic-sport"/></svg></span>
+        <h3>Deporte y lesiones</h3>
+        <p>Para quien entrena y para quien se ha lesionado, con vuelta progresiva a la actividad.</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Fisioterapia deportiva</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Rehabilitación</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Ejercicio terapéutico</li>
+        </ul>
+      </div>
+      <div class="area-c reveal"><span class="hc hc-arco" aria-hidden="true"><i></i><b></b></span>
+        <span class="ic"><svg aria-hidden="true"><use href="#ic-hands"/></svg></span>
+        <h3>Dolor y tensión</h3>
+        <p>Para contracturas y molestias que se repiten, con técnicas manuales e instrumentales.</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Terapia manual</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Punción seca tras valoración</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Pautas para casa</li>
+        </ul>
+      </div>
+      <div class="area-c reveal"><span class="hc hc-fam" aria-hidden="true"><i></i><b></b><u></u></span>
+        <span class="ic"><svg aria-hidden="true"><use href="#ic-pelvis"/></svg></span>
+        <h3>Suelo pélvico</h3>
+        <p>Un área propia, en un entorno de confianza y con un plan adaptado a ti.</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Valoración individual</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Plan adaptado</li>
+          <li><svg aria-hidden="true"><use href="#ic-check"/></svg>Seguimiento cercano</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONDICIONES ===================== -->
+<section class="sec sec--bone" id="condiciones">
+  <span class="bignum" aria-hidden="true" data-n="06" style="right:-1.5vw;top:20px"></span>
+  <div class="wrap">
+    <div class="hs hs--c" aria-hidden="true"><div class="hs-arco hs-arco--a"></div><div class="hs-arco hs-arco--b"></div><div class="hs-suelo"></div><div class="hs-p hs-doc" style="left:46px;top:0;width:206px;height:210px;--r:-3deg;transform:rotate(-3deg)" data-l="Plan por escrito"><i></i><i></i><i></i><i></i><u></u><b></b></div><div class="hs-p hs-p--g d2" style="right:0;top:76px;width:172px;height:128px;--r:3deg;transform:rotate(3deg)" data-l="Seguimiento"><div class="hs-rows"><div class="hs-r"><b></b></div><div class="hs-r"><b></b></div><div class="hs-r"><b></b></div></div></div></div>
+    <div class="sec-head reveal">
+      <span class="eyebrow green">Condiciones</span>
+      <h2>Qué esperar,<br>sin letra pequeña</h2>
+      <p>En esta demo <strong>no hay precios ni cifras</strong>. En una clínica real, cada plan se explicaría por escrito antes de empezar.</p>
+    </div>
+    <div class="precios-grid">
+
+      <div class="precio-card reveal">
+        <div class="ph"><span class="ic"><svg aria-hidden="true"><use href="#ic-search"/></svg></span><h3>Primera visita</h3></div>
+        <div class="precio-row"><span class="k">Valoración</span><span class="v">Sin compromiso</span></div>
+        <div class="precio-row"><span class="k">Plan propuesto</span><span class="v">Explicado</span></div>
+        <div class="precio-row"><span class="k">Decides</span><span class="v">Tú</span></div>
+      </div>
+
+      <div class="precio-card reveal">
+        <div class="ph"><span class="ic"><svg aria-hidden="true"><use href="#ic-hands"/></svg></span><h3>Tratamiento</h3></div>
+        <div class="precio-row"><span class="k">Sesiones</span><span class="v">Según tu caso</span></div>
+        <div class="precio-row"><span class="k">Ajuste</span><span class="v">En cada sesión</span></div>
+        <div class="precio-row"><span class="k">Pautas para casa</span><span class="v">Si encajan</span></div>
+      </div>
+
+      <div class="precio-card reveal">
+        <div class="ph"><span class="ic"><svg aria-hidden="true"><use href="#ic-calendar"/></svg></span><h3>Tu cita</h3></div>
+        <div class="precio-row"><span class="k">Cómo se pide</span><span class="v">Por el chat</span></div>
+        <div class="precio-row"><span class="k">Confirmación</span><span class="v">Te llamamos</span></div>
+        <div class="precio-row"><span class="k">Horario</span><span class="v">Lunes a viernes</span></div>
+      </div>
+
+      <div class="precio-card reveal">
+        <div class="ph"><span class="ic"><svg aria-hidden="true"><use href="#ic-check"/></svg></span><h3>Alta</h3></div>
+        <div class="precio-row"><span class="k">Cuándo</span><span class="v">Acordada contigo</span></div>
+        <div class="precio-row"><span class="k">Después</span><span class="v">Pautas</span></div>
+        <div class="precio-row"><span class="k">Dudas</span><span class="v">Por el chat</span></div>
+      </div>
+
+    </div>
+    <p class="precios-note reveal"><svg aria-hidden="true"><use href="#ic-info"/></svg><span>Demo con clínica ficticia: no se muestran precios, ofertas ni cifras de ningún tipo. Las fotos son imágenes de archivo. Sofía no da consejo médico: eso se resuelve en la valoración.</span></p>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="sec" id="faq">
+  <span class="bignum" aria-hidden="true" data-n="07" style="left:-1.5vw;top:20px"></span>
+  <div class="wrap">
+    <div class="hs hs--faq" aria-hidden="true"><div class="hs-chat hs-chat--1" data-l="Sofía · Asistente IA"><div class="hl-m hl-m--u"><i></i><i></i></div><div class="hl-m"><i></i><i></i></div></div><div class="hs-chat hs-chat--2" data-l="Sofía · Asistente IA"><div class="hl-m"><i></i><i></i></div><div class="hl-m hl-m--u"><i></i><i></i></div><div class="hl-m hl-m--t"><b></b></div></div></div>
+    <div class="sec-head sec-head--center reveal">
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2>Lo que más nos preguntan</h2>
+    </div>
+    <div class="faq">
+      <details class="faq-item reveal"><summary class="faq-q">¿La primera valoración tiene algún compromiso?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a"><p>No. En la primera visita te escuchamos, valoramos tu movilidad y te explicamos qué vemos y qué plan proponemos. Decides tú si seguir.</p></div></details>
+      <details class="faq-item reveal"><summary class="faq-q">¿Cuántas sesiones necesitaré?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a"><p>Depende de cada caso. Tras la valoración, tu fisioterapeuta te explica el plan y lo ajusta en cada sesión según tu evolución.</p></div></details>
+      <details class="faq-item reveal"><summary class="faq-q">¿Me recomendaréis ejercicios para casa?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a"><p>Sí. Cuando encaja con tu caso, te damos pautas y ejercicios sencillos para hacer entre sesiones.</p></div></details>
+      <details class="faq-item reveal"><summary class="faq-q">¿La punción seca es para todo el mundo?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a"><p>No. Es una técnica que solo se usa después de la valoración y si tu fisioterapeuta considera que encaja contigo.</p></div></details>
+      <details class="faq-item reveal"><summary class="faq-q">¿Puedo pedir cita para suelo pélvico?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a"><p>Sí. Es una valoración en un entorno de confianza y con un plan adaptado a ti. Puedes pedirla igual que cualquier otra cita.</p></div></details>
+      <details class="faq-item reveal"><summary class="faq-q">¿Cómo pido cita?<span class="pl" aria-hidden="true"></span></summary><div class="faq-a"><p>Habla con Sofía, nuestra asistente del chat: eliges qué necesitas, el día y la hora, dejas tu nombre y teléfono, y te llamamos para confirmar. También puedes llamarnos al 643 199 580 o escribir a comercial@whitemoon.es.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACTO ===================== -->
+<section class="sec sec--bone" id="contacto">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="sec-head reveal" style="margin-bottom:8px">
+          <span class="eyebrow">Contacto</span>
+          <h2>Estamos en<br>Madrid Oeste</h2>
+        </div>
+        <div class="contact-info reveal">
+          <div class="cinfo"><p class="k">Dirección</p><p class="val">Majadahonda, Madrid<br>(dirección de ejemplo en esta demo)</p></div>
+          <div class="cinfo"><p class="k">Teléfono y WhatsApp</p><p class="val"><a href="tel:+34643199580">643 199 580</a><br><a href="https://wa.me/34643199580" target="_blank" rel="noopener">Escribir por WhatsApp</a></p></div>
+          <div class="cinfo"><p class="k">Horario de ejemplo</p><p class="val">L–V 9:30–20:00<br>Sábado y domingo cerrado</p></div>
+          <div class="cinfo"><p class="k">Email</p><p class="val"><a href="mailto:comercial@whitemoon.es">comercial@whitemoon.es</a></p></div>
+        </div>
+        <div class="hl-map reveal" aria-hidden="true"><span class="hl-orbita"></span><span class="hl-pin"></span><span class="hs-chip hs-chip--g" data-l="Alta"></span></div>
+      </div>
+      <div class="contact-card reveal">
+        <h3>Pide tu cita</h3>
+        <p>Cuéntale a Sofía qué necesitas. Recoge tus datos y te llamamos para confirmar día y hora. La primera valoración es sin compromiso.</p>
+        <button class="btn btn--block" data-watio type="button"><svg aria-hidden="true"><use href="#ic-chat"/></svg>Hablar con Sofía</button>
+        <a class="btn btn--ghost btn--block" href="tel:+34643199580"><svg aria-hidden="true"><use href="#ic-phone"/></svg>Llamar al 643 199 580</a>
+        <p class="contact-urg"><svg aria-hidden="true"><use href="#ic-info"/></svg>Clínica ficticia · demo de WhiteMoon</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 </main>
 
-<footer class="foot" id="pie">
-  <div class="wrap foot__row">
-    <a class="brand" href="#main" aria-label="WhiteMoon Fisio, volver arriba">
-      <span class="brand__kicker">Fisioterapia</span>
-      <span class="brand__mark">WhiteMoon Fisio</span>
-    </a>
-    <nav class="foot__links" aria-label="Pie">
-      <a href="#servicios">Servicios</a>
-      <a href="#tratamiento">Tratamiento</a>
-      <a href="#sofia">Sofía</a>
-      <a href="#contacto">Contacto</a>
-      <a href="https://whitemoon.es" target="_blank" rel="noopener">WhiteMoon Agencia IA</a>
-    </nav>
-  </div>
+<!-- ===================== FOOTER ===================== -->
+<footer class="foot">
   <div class="wrap">
-    <p class="foot__disclaimer">
-      © <span id="yr">2026</span> WhiteMoon Fisio. Demo de producto de WhiteMoon: «WhiteMoon Fisio» es una
-      clínica ficticia, los textos son de ejemplo y el contacto es el de la agencia. Las solicitudes de cita
-      que se envían desde el chat llegan a WhiteMoon. Fotos de Unsplash.
-    </p>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="./" class="brand">
+          <span class="brand__mark"><img src="assets/logo-whitemoon.webp" alt="" width="32" height="34" loading="lazy" decoding="async"></span>
+          <span class="brand__txt"><b>WhiteMoon</b><small>Fisioterapia · Madrid</small></span>
+        </a>
+        <p>Clínica de fisioterapia en Madrid Oeste. Fisioterapia deportiva, rehabilitación, punción seca, suelo pélvico, terapia manual y ejercicio terapéutico.</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#top">Inicio</a></li>
+          <li><a href="#clinica">La clínica</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#condiciones">Condiciones</a></li>
+          <li><a href="#faq">Preguntas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#servicios">Fisioterapia deportiva</a></li>
+          <li><a href="#servicios">Rehabilitación</a></li>
+          <li><a href="#servicios">Punción seca</a></li>
+          <li><a href="#servicios">Suelo pélvico</a></li>
+          <li><a href="#servicios">Terapia manual</a></li>
+          <li><a href="#servicios">Ejercicio terapéutico</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="tel:+34643199580"><svg aria-hidden="true"><use href="#ic-phone"/></svg>643 199 580</a></li>
+          <li><a href="https://wa.me/34643199580" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-wa"/></svg>WhatsApp 643 199 580</a></li>
+          <li><a href="mailto:comercial@whitemoon.es"><svg aria-hidden="true"><use href="#ic-mail"/></svg>comercial@whitemoon.es</a></li>
+          <li><span><svg aria-hidden="true"><use href="#ic-pin"/></svg>Majadahonda, Madrid</span></li>
+          <li><span><svg aria-hidden="true"><use href="#ic-clock"/></svg>L–V 9:30–20:00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> WhiteMoon Fisio · Clínica ficticia · Demo</span>
+      <span>Demo IA por <a href="https://whitemoon.es" target="_blank" rel="noopener">WhiteMoon</a></span>
+    </div>
   </div>
 </footer>
 
-<!-- Botón flotante y chat de Sofía -->
-<button class="chat-fab" type="button" id="chatFab" data-chat>
-  <span class="chat-fab__dot" aria-hidden="true"></span>
-  Pedir cita
+<button id="watio-open" class="watio-btn" type="button" aria-label="Abrir el chat con Sofía, asistente de la clínica">
+  <span class="pulse" aria-hidden="true"></span>
+  <svg aria-hidden="true"><use href="#ic-chat"/></svg>
+  <span class="label">Habla con Sofía</span>
 </button>
 
-<section class="chat" id="chat" role="dialog" aria-modal="false" aria-labelledby="chatTitle" aria-hidden="true">
-  <header class="chatHead">
-    <img src="assets/sofia.jpg" alt="" width="40" height="40">
-    <div class="t">
-      <b id="chatTitle">Sofía</b>
-      <small>Asistente IA · WhiteMoon Fisio</small>
+<section id="watio" class="watio-panel" aria-label="Asistente de la clínica Sofía" inert>
+  <div class="watio-head">
+    <span class="watio-head__av"><svg aria-hidden="true"><use href="#ic-heart"/></svg></span>
+    <div>
+      <b>Sofía<span class="dot" aria-hidden="true"></span></b>
+      <small>Asistente IA · WhiteMoon</small>
     </div>
-    <button class="chatClose" id="chatClose" type="button" aria-label="Cerrar chat">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
-    </button>
-  </header>
-  <div class="chatBody" id="chatBody" aria-live="polite"></div>
-  <p class="chatNote">Asistente virtual de demostración.</p>
-  <form class="chatFoot" id="chatForm" autocomplete="off">
-    <input id="chatInput" type="text" placeholder="Escribe tu mensaje…" aria-label="Escribe tu mensaje" disabled>
-    <button class="chatSend" id="chatSend" type="submit" aria-label="Enviar" disabled>
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-    </button>
+    <button class="watio-head__close" type="button" aria-label="Cerrar chat"><svg aria-hidden="true"><use href="#ic-close"/></svg></button>
+  </div>
+  <div class="watio-body" role="log" aria-live="polite"></div>
+  <div class="watio-quick"></div>
+  <form class="watio-foot" autocomplete="off">
+    <label class="sr-only" for="watio-input">Escribe tu mensaje para Sofía</label>
+    <input id="watio-input" type="text" name="mensaje" placeholder="Escribe tu respuesta…" disabled>
+    <button type="submit" aria-label="Enviar mensaje" disabled><svg aria-hidden="true"><use href="#ic-send"/></svg></button>
   </form>
+  <p class="watio-note">Asistente virtual de demostración: no da consejo médico. Tus datos solo se usan para contactarte sobre tu solicitud.</p>
 </section>
 
-<script src="assets/js/site.js" defer></script>
+<script src="assets/js/main.js?v=20261021" defer></script>
+<script src="assets/js/holo.js?v=20261021" defer></script>
+<script src="assets/js/watio.js?v=20261021" defer></script>
 </body>
 </html>
